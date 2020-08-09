@@ -16,3 +16,4 @@ D:\CSharpProjects\SimpleCalculator\SimpleCalculator\obj\Debug\netcoreapp3.1\Simp
 D:\CSharpProjects\SimpleCalculator\SimpleCalculator\obj\Debug\netcoreapp3.1\SimpleCalculator.dll
 D:\CSharpProjects\SimpleCalculator\SimpleCalculator\obj\Debug\netcoreapp3.1\SimpleCalculator.pdb
 D:\CSharpProjects\SimpleCalculator\SimpleCalculator\obj\Debug\netcoreapp3.1\SimpleCalculator.genruntimeconfig.cache
+D:\CSharpProjects\SimpleCalculator\SimpleCalculator\obj\Debug\netcoreapp3.1\SimpleCalculator.csprojAssemblyReference.cache
