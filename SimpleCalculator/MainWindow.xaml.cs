@@ -56,15 +56,21 @@ namespace SimpleCalculator
                 }
 
                 resultLabel.Content = result.ToString();
+                selectedOperator = SelectedOperator.NULL;
             }
         }
 
         private void PercentageButton_Click(object sender, RoutedEventArgs e)
         {
-            if (double.TryParse(resultLabel.Content.ToString(), out lastNumber))
+            double tempNumber;
+            if (selectedOperator == SelectedOperator.NULL && double.TryParse(resultLabel.Content.ToString(), out lastNumber))
             {
                 lastNumber /= 100;
                 resultLabel.Content = lastNumber.ToString();
+            }
+            else if(selectedOperator != SelectedOperator.NULL && double.TryParse(resultLabel.Content.ToString(), out tempNumber))
+            {
+                resultLabel.Content = $"{lastNumber * tempNumber / 100}";
             }
         }
 
@@ -80,6 +86,9 @@ namespace SimpleCalculator
         private void AcButton_Click(object sender, RoutedEventArgs e)
         {
             resultLabel.Content = "0";
+            selectedOperator = SelectedOperator.NULL;
+            result = 0;
+            lastNumber = 0;
         }
 
         private void NumberButton_Click(object sender, RoutedEventArgs e)
@@ -134,7 +143,8 @@ namespace SimpleCalculator
         Addition,
         Subtraction,
         Multiply,
-        Division
+        Division,
+        NULL
     }
 
     public class SimpleMath
